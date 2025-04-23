@@ -1,0 +1,63 @@
+
+
+
+
+input double EquityTarget = 510000; // Target floating equity to pause trading
+input double MaxLoss = 490000;      // Minimum equity before pausing due to loss
+input double MaxFloatingLoss = -5000; // Maximum floating loss before disabling EA
+input int CooldownMinutes = 60;     // Cooldown period in minutes
+input bool EnableEAInput = true;    // Initial option to enable/disable EA
+extern double BaseLotSize = 0.01; // Base lot size for initial trades
+extern double MaxLotSize = 0.50; // Maximum lot size for pyramiding
+extern int RecoveryZonePips = 10; // Recovery zone size in pips
+extern int TakeProfitPips = 5; // Take profit in pips
+extern int StopLossPips = 20; // Stop loss in pips
+extern int MaxTrades = 10; // Maximum number of open trades
+extern double PyramidMultiplier = 1.5; // Lot size multiplier for pyramid trades
+extern double EquityThreshold = 1000; // Minimum equity before closing losses 
+extern double ProfitLock = 50; // Lock profits when reaching this amount 
+extern double GridSpacing = 10; // Grid spacing for additional hedging 
+extern double LotSize = 0.1; // Default lot size for new trades 
+extern double TrailingStop = 20; // Trailing stop in pips 
+extern double EquityLockPercentage = 60; // Auto lock trading when equity falls below this percentage 
+extern double AutoHedgeThreshold = 100; // Pips movement before placing a hedge trade 
+extern double LotScalingFactor = 1.5; // Factor for scaling lot sizes based on trend 
+extern string StartTime = "08:00"; // EA Start Time (HH:MM) 
+extern string StopTime = "20:00"; // EA Stop Time (HH:MM) 
+extern int MagicNumber = 123456; // Unique identifier for EA trades
+input double RiskPerTrade = 0.005;    // Risk per trade (0.5% = 0.005)
+input int ShortEMA_Period = 7;        // Short EMA period
+input int LongEMA_Period = 14;        // Long EMA period
+input int RSI_Period = 14;            // RSI period
+input double RSI_BuyLevel = 40.0;     // RSI buy threshold
+input double RSI_SellLevel = 60.0;    // RSI sell threshold
+input int Stochastic_K = 14;          // Stochastic K period
+input int Stochastic_D = 3;           // Stochastic D period
+input int Stochastic_Slowing = 3;     // Stochastic slowing
+input double Stoch_BuyLevel = 30.0;   // Stochastic buy threshold
+input double Stoch_SellLevel = 70.0;  // Stochastic sell threshold
+input int ATR_Period = 14;            // ATR period for SL/TP
+input double ATR_Multiplier_SL = 2.0; // SL multiplier (2x ATR)
+input double ATR_Multiplier_TP = 3.5; // TP multiplier (3.5x ATR)
+input double ATR_Multiplier_Trail = 1.5; // Trailing stop (1.5x ATR)
+input double MaxSpreadATRMultiplier = 2.0; // Max spread (2x ATR)
+input double MaxSpreadPips = 50.0;    // Absolute max spread
+input double MinATR_Pips = 10.0;      // Minimum ATR for trading
+input double MaxATR_Pips = 100.0;     // Maximum ATR (increased)
+input int BB_Period = 20;             // Bollinger Bands period
+input double BB_Deviation = 2.0;      // Bollinger Bands deviation
+input int SMA_Period = 200;           // SMA period for trend
+input double MaxDailyDrawdown = 0.05; // Max daily drawdown (5%)
+input double MaxOverallDrawdown = 0.10; // Max overall drawdown (10%)
+input double SafeDailyDrawdown = 0.02; // Safe daily drawdown (2%)
+input double SafeOverallDrawdown = 0.05; // Safe overall drawdown (5%)
+input int MaxDailyLosses = 3;         // Max losses per day
+input int MinTradeDuration = 10;      // Minimum trade duration (seconds)
+input int MaxTrades = 1;              // Maximum simultaneous trades
+input int MagicNumber = 123456;       // Unique trade identifier
+input bool UseNewsFilter = true;      // Enable news filter
+input int NewsPauseMinutes = 90;      // Pause trading X minutes before/after news
+input bool CloseBeforeWeekend = true; // Close trades before Friday close
+input string WeekendCloseTime = "17:00"; // Friday close time (server time)
+input string TradingStartTime = "06:00"; // Start trading (GMT, widened)
+input string TradingEndTime = "20:00";   // End trading (GMT, widened)
