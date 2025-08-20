@@ -1,3 +1,39 @@
+extern bool Thursday = true;       // Thursday trade ON/OFF
+extern int ThursdayStartTime = 4;  // Entry permission start time on Thursday
+extern int ThursdayEndTime = 23;   // Entry permission end time on Thursday
+extern bool Friday = true;         // Friday trade ON/OFF
+extern int FridayStartTime = 4;    // Entry permission start time on Friday
+extern int FridayEndTime = 23;     // Entry permission end time on Friday
+extern bool Saturday = false;      // Saturday trade ON/OFF (usually disabled since market is closed)
+extern int SaturdayStartTime = 0;  // Entry permission start time on Saturday
+extern int SaturdayEndTime = 0;    // Entry permission end time on Saturday
+extern bool Sunday = false;        // Sunday trade ON/OFF (some brokers open late Sunday)
+extern int SundayStartTime = 22;   // Entry permission start time on Sunday (example: 22:00)
+extern int SundayEndTime = 23;     // Entry permission end time on Sunday
+extern Account_Type SWITCH = OFF; // Micro account/standard account switching
+extern double Lots = 0.01; // Number of lots
+extern int MaxPositions = 12; // Maximum number of positions MAX20
+extern Trade_Pair PairChoice = EURGBP; // Trade currency pair
+extern bool New_Entry = true; // Allow new entry
+extern int Slippage = 3; // Slippage
+extern int WaitSeconds = 45; // Wait after entry (minutes)
+extern bool MonthlyStop = true; // Stop at the beginning of the last month
+extern bool HalfDay; // Stops on the 15th of every month
+extern int StopStar = 5; // Economic indicator rank
+extern bool IndiStop = true; // Economic indicator stop function
+extern int DisplayTimeBefore = 180; // Indicator posting entry stop time before announcement (minutes)
+extern int DisplayTimeAfter = 120; // Indicator posting entry stop time after announcement (minutes)
+extern bool IndBeforeClose; // Indicator to close before or after the indicator
+extern int IndStopPos; // Number of positions to close before indicator
+extern bool Monday = true; // Monday trade ON/OFF
+extern int MondayStartTime = 4; // Entry permission start time on Monday
+extern int MondayEndTime = 23; // Entry permission end time on Monday
+extern bool Tuesday = true; // Tuesday trade ON/OFF
+extern int TuesdayStartTime = 4; // Entry permission start time on Tuesday
+extern int TuesdayEndTime = 23; // Entry permission end time on Tuesday
+extern bool Wednesday = true; // Wednesday trade ON/OFF
+extern int WednesdayStartTime = 4; // Entry permission start time on Wednesday
+extern int WednesdayEndTime = 23; // Entry permission end time on Wednesday
 extern double RiskPercent        = 0.5;      // Risk per trade in %
 extern int    TakeProfit         = 300;      // TP in points
 extern int    StopLoss           = 150;      // SL in points
